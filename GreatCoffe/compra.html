@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pedido</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
+    <link rel="icon" href="img/Logo/logo_gc.png" />
+    <script src="javascript.js"></script>
+</head>
+<body>
+<body background="Img/Fundo/textura_geo.jpg" alt="imagem"></body>
+    <div id="navbar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html"> <img src="img/Logo/logo_gc.png" height="20" width="20"> <font face="Pristina">GreatCoffe&#8482</font></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="header">
+        <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">Menu</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="cardapio.html">Cardapio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="promoções.html"> Promoções</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="formulario.html">Cadastrar/Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="sobre.html">Sobre a gente<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+                <a class="nav-link" href="compra.html">Faça já seu pedido!<span class="sr-only"></span></a>
+        </li>
+        </ul>
+    </div>
+        </nav>
+    </div>
+
+    <div id="Compra">
+        <p>Tipo de Café: </p>
+        <select id="ccafe" name="ccafe">
+            <option value="0" id="tcafe">Tipo do Café</option>
+            <option value="1" id="tcafe">Breve</option>
+            <option value="2" id="tcafe">Capuccino com Canela</option>
+            <option value="3" id="tcafe">Com Chantilly</option>
+            <option value="4" id="tcafe">Com Leite</option>            
+            <option value="5" id="tcafe">Com Panna</option>
+            <option value="6" id="tcafe">Expresso</option>
+            <option value="7" id="tcafe">Macchiato</option>
+            <option value="8" id="tcafe">Média</option>
+            <option value="9" id="tcafe">Mocha</option>
+            <option value="10" id="tcafe">Pingado</option>
+        </select>
+        Quantidade do produto: <input id="quantidade"> Valor a ser pago = 
+        <output id="valor" onforminput="calcular()"></output>
+        <input type="submit" onclick="calcular()">
+    
+        <p>Tipo de Suco: </p>
+        <select>
+            <option value="" id="tsuco">Sabor</option>
+            <option value="" id="tsuco">Goiaba</option>
+            <option value="" id="tsuco">Kiwi</option>
+            <option value="" id="tsuco">Laranja</option>
+            <option value="" id="tsuco">Limão</option>            
+            <option value="" id="tsuco">Maracuja</option>
+            <option value="" id="tsuco">Melancia</option>
+            <option value="" id="tsuco">Morango</option>
+            <option value="" id="tsuco">Pêssego</option>
+            <option value="" id="tsuco">Tangirina</option>
+            <option value="" id="tsuco">Uva</option>
+        </select>
+        <select>
+            <option value="0" id="med">Medida</option>
+            <option value="1" id="medsuco">200ML</option>
+            <option value="2" id="medsuco">350ML</option>
+            <option value="3" id="medsuco">500ML</option>
+            <option value="4" id="medsuco">1L</option>
+        </select>
+        Quantidade do produto: <input id="quantidade"> Valor a ser pago = 
+        <output id="valor" onforminput="calcular()"></output>
+        <input type="submit" onclick="calcular()">
+    
+        <p>Tipo de Sobremesa: </p>
+        <select>
+            <option value="0" id="tdoce">Doce</option>
+            <option value="1" id="tdoce">Creme Catalana</option>
+            <option value="2" id="tdoce">Creme Bombom de Morango</option>
+            <option value="3" id="tdoce">Flã Tricolor</option>
+            <option value="4" id="tdoce">Mousse de Chocolate</option>            
+            <option value="5" id="tdoce">Pavê dos Sonhos</option>
+            <option value="6" id="tdoce">Pudim de Iorgurte</option>
+            <option value="7" id="tdoce">Tiramisù Simples</option>
+            <option value="8" id="tdoce">Torta de Chocolate</option>
+            <option value="9" id="tdoce">Torta de Laranja e Merengue</option>
+            <option value="10" id="tdoce">Torta de Pêssego</option>
+            </select>
+            Quantidade do produto: <input id="quantidade"> Valor a ser pago = 
+            <output id="valor" onforminput="calcular()"></output>
+            <input type="submit" onclick="calcular()">
+    
+        <p>Tipo de Salgado: </p>
+        <select>
+            <option value="0" id="tsalg">Salgado</option>
+            <option value="1" id="tsalg">Bolinha de Queijo</option>
+            <option value="2" id="tsalg">Coxinha</option>
+            <option value="3" id="tsalg">Enroladinho de Salsicha</option>            
+            <option value="5" id="tsalg">Maravilha</option>
+            <option value="6" id="tsalg">Salgado de Carne</option>
+            </select>
+            Quantidade do produto: <input id="quantidade"> Valor a ser pago = 
+            <output id="valor" onforminput="calcular()"></output>
+            <input type="submit" onclick="calcular()">
+
+        <p>Pastel: </p>
+        <select>
+            <option value="0" id="tpas">Pastel</option>
+            <option value="1" id="tpas">4 Queijos</option>
+            <option value="2" id="tpas">Carne</option>
+            <option value="3" id="tpas">Galinha</option>
+            <option value="4" id="tpas">Misto</option>
+            <option value="5" id="tpas">Queijo</option>
+        </select>
+            Quantidade do produto: <input id="quantidade"> Valor a ser pago = 
+            <output id="valor" onforminput="calcular()"></output>
+            <input type="submit" onclick="calcular()">
+
+        <!--<p>Valor total da compra:</p>
+        <output id="valor" onforminput="calctot()"></output>-->
+    </div>
+    
+    <div id="rodape">
+        <footer>Pedro Luis © 2019 / Great Coffe © 2019 </footer>
+  </div> 
+</body>
+</html>
